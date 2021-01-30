@@ -1,0 +1,4 @@
+framework module GhostPlusX {
+  header "GhostPlusX-Swift.h"
+  requires objc
+}

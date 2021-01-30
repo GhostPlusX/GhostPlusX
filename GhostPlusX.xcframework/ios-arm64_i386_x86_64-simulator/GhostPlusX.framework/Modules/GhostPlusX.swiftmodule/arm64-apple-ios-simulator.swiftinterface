@@ -1,0 +1,44 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.3.2 (swiftlang-1200.0.45 clang-1200.0.32.28)
+// swift-module-flags: -target arm64-apple-ios10.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -module-name GhostPlusX
+import DeviceCheck
+import Foundation
+import KeychainSwift
+import Swift
+import UIKit
+import WebKit
+@_hasMissingDesignatedInitializers public class DeviceUtil {
+  public static var sharedInstance: GhostPlusX.DeviceUtil
+  public func generateDeviceUUID() -> Swift.String
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class WebKitManager {
+  public static var shared: GhostPlusX.WebKitManager
+  public func createWKWebView() -> WebKit.WKWebView
+  public func grabUserAgent()
+  public func setAppendUserAgent(_ appendUserAgent: Swift.String)
+  @objc deinit
+}
+extension WebKitManager {
+  public static func runJavaScriptAlertPanel(viewControllerToPresent: UIKit.UIViewController, title: Swift.String? = "GhostPlus", message: Swift.String, okButton: Swift.String? = "OK", completionHandler: @escaping () -> Swift.Void)
+  public static func runJavaScriptConfirmPanel(viewControllerToPresent: UIKit.UIViewController, message: Swift.String, title: Swift.String? = "GhostPlus", okButton: Swift.String? = "OK", cancelButton: Swift.String? = "Cancel", completionHandler: @escaping (Swift.Bool) -> Swift.Void)
+  public static func runJavaScriptTextInputPanel(viewControllerToPresent: UIKit.UIViewController, title: Swift.String? = "GhostPlus", okButton: Swift.String? = "OK", cancelButton: Swift.String? = "Cancel", prompt: Swift.String, defaultText: Swift.String?, completionHandler: @escaping (Swift.String?) -> Swift.Void)
+}
+extension WebKitManager {
+  public func decidePolicyForAppStore(_ navigationAction: WebKit.WKNavigationAction) -> Swift.Bool
+  public func decidePolicyForTel(_ navigationAction: WebKit.WKNavigationAction) -> Swift.Bool
+  public func decidePolicyForEmail(_ navigationAction: WebKit.WKNavigationAction) -> Swift.Bool
+  public func decidePolicyForISP(_ navigationAction: WebKit.WKNavigationAction) -> Swift.Bool
+}
+@_hasMissingDesignatedInitializers public class KeychainManager {
+  public static var sharedInstance: GhostPlusX.KeychainManager
+  public var accessGroup: Swift.String? {
+    get
+    set(value)
+  }
+  public func setKeychain(key: Swift.String, value: Swift.String?) throws
+  public func getKeychain(key: Swift.String) -> Any
+  public func setKeychain(key: Swift.String, value: Swift.Bool?) throws
+  public func setKeychain(key: Swift.String, value: Foundation.Data?) throws
+  @objc deinit
+}
