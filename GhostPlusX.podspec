@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name         = "GhostPlusX"
-    s.version      = "1.0.0"
+    s.version      = "1.0"
     s.summary      = "GhostPlusX Framework Library"
     s.description  = <<-DESC
     GhostPlus Extended Framework For Hybrid Application of Swift
