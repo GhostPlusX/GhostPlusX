@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
     s.description  = <<-DESC
     GhostPlus Extended Framework For Hybrid Application of Swift
                   DESC
-    s.homepage     = "https://github.com/GhostPlusX/GhostPlusX.git"
+    s.homepage     = "https://www.ghostplus.com/"
     s.license = { :type => 'Copyright', :text => <<-LICENSE
                      Copyright 2021 All Rights Reserved By GhostPlus 
                    LICENSE
