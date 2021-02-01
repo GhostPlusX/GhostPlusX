@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
                      Copyright 2021 All Rights Reserved By GhostPlus 
                    LICENSE
                 }
-    s.author             = { "$(DAVID CHUN)" => "$(david1000@gmail.com)" }
+    s.author             = { "DAVID CHUN" => "david1000@gmail.com" }
     s.source       = { :git => "https://github.com/GhostPlusX/GhostPlusX.git", :tag => "#{s.version}" }
     s.vendored_frameworks = "GhostPlusX.xcframework"
     s.platform = :ios
